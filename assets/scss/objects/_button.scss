@@ -5,6 +5,7 @@
 
 .Button {
   border: none;
+  border-radius: 8px;
   font-family: var(--font-mono);
   font-size: var(--font-size-xs);
   padding: calc(var(--space)*1.5) calc(var(--space) *2);
@@ -22,7 +23,7 @@
 
 .Button--primary {
   background: var(--color-brand);
-  color: var(--color-white) !important;
+  color: var(--color-white);
   padding: 14px 20px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -49,4 +50,22 @@
 .Button--secondary:active,
 .Button--secondary.is-pressed {
   background-color: var(--color-brand);
+}
+
+#Booking {
+  display: none;
+}
+
+#Booking-nav {
+  background-color: var(--color-highlight);
+  color: var(--color-brand);
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+@media (min-width: 900px) {
+  #Booking {
+    display: block;
+  }
 }

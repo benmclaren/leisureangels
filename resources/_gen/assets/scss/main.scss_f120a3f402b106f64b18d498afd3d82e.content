@@ -84,6 +84,8 @@ nav {
     right: calc(var(--space) *4); } }
 
 .offscreen-nav {
+  display: flex;
+  flex-direction: column;
   position: fixed;
   top: 0;
   width: 100%;
@@ -91,27 +93,26 @@ nav {
   transform: translateX(100vw);
   background-color: var(--color-brand);
   z-index: 5;
-  transition: .5s;
+  transition: .2s;
   transition-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1); }
 
 .offscreen-nav.open {
   transform: translateY(0vh); }
 
 .offscreen-nav {
-  display: flex;
   align-items: center;
   justify-content: center; }
 
 .offscreen-nav-links {
-  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  text-align: center;
+  justify-content: center;
   font-size: x-large; }
 
 .offscreen-nav-links li {
-  list-style-type: none; }
+  list-style-type: none;
+  margin-top: calc(var(--space) *4);
+  margin-bottom: calc(var(--space) *1); }
   .offscreen-nav-links li a {
     color: #fff;
     text-decoration: none; }
@@ -122,6 +123,7 @@ nav {
 
 .Button {
   border: none;
+  border-radius: 8px;
   font-family: var(--font-mono);
   font-size: var(--font-size-xs);
   padding: calc(var(--space)*1.5) calc(var(--space) *2);
@@ -136,7 +138,7 @@ nav {
 
 .Button--primary {
   background: var(--color-brand);
-  color: var(--color-white) !important;
+  color: var(--color-white);
   padding: 14px 20px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -161,6 +163,20 @@ nav {
 .Button--secondary:active,
 .Button--secondary.is-pressed {
   background-color: var(--color-brand); }
+
+#Booking {
+  display: none; }
+
+#Booking-nav {
+  background-color: var(--color-highlight);
+  color: var(--color-brand);
+  width: 100%;
+  display: block;
+  text-align: center; }
+
+@media (min-width: 900px) {
+  #Booking {
+    display: block; } }
 
 .logo {
   font-size: var(--font-size-md);
@@ -216,6 +232,9 @@ nav {
   color: var(--color-brand);
   background-color: var(--color-accent); }
 
+:root {
+  --space: calc(1rem/2); }
+
 * {
   margin: 0;
   padding: 0; }
@@ -224,4 +243,5 @@ nav {
   display: none; }
 
 body {
+  font-family: var(--font-default);
   background-color: var(--color-body); }
