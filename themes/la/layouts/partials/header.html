@@ -1,2 +1,20 @@
-<h1>{{ site.Title }}</h1>
-{{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+<header>
+  <nav>
+    <div class="navbar-header">
+      <a href="/" class="logo"><p>LEISURE ANGELS</p></a>
+      <ul class="navbar-desktop-links">
+        {{ range .Site.Menus.nav }}
+          <li>
+            <a href="{{ .URL }}" class="header-links hover">{{ .Name }}</a>
+          </li>
+        {{ end }}
+      </ul>
+      <a href="/contact" class="Button Button--primary">Book a class</a>
+      <button aria-expanded="false" class="burger">
+        <div class="line-1"></div>
+        <div class="line-2"></div>
+        <div class="line-3"></div>
+      </button>
+    </div>
+  </nav>
+</header>

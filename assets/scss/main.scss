@@ -1,0 +1,22 @@
+// tailwind 
+// @import "tailwindcss/base";
+// @import "tailwindcss/components";
+// @import "tailwindcss/utilities";
+// local
+@import "components/index.scss";
+@import "objects/index.scss";
+@import "abstracts/index.scss";
+
+// css reset 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+body {
+  background-color: var(--color-body);
+}

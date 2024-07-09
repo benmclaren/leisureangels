@@ -1,0 +1,42 @@
+.offscreen-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(100vw);
+  background-color: var(--color-brand);
+  z-index: 5;
+  transition: .5s;
+  transition-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.offscreen-nav.open {
+  transform: translateY(0vh);
+}
+
+.offscreen-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.offscreen-nav-links {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  font-size: x-large;
+}
+
+.offscreen-nav-links li {
+  list-style-type: none;
+
+
+  a {
+    color: #fff;
+    text-decoration: none;
+
+  }
+
+}
