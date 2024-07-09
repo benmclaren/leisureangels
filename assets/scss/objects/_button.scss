@@ -1,0 +1,71 @@
+.ButtonWrap {
+  text-align: center;
+  margin-top: calc(var(--space) * 4);
+}
+
+.Button {
+  border: none;
+  border-radius: 8px;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  padding: calc(var(--space)*1.5) calc(var(--space) *2);
+  transition-duration: 0.2s;
+  vertical-align: middle;
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    border: none;
+    text-decoration: none !important;
+  }
+}
+
+.Button--primary {
+  background: var(--color-brand);
+  color: var(--color-white);
+  padding: 14px 20px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  text-rendering: optimizeLegibility;
+}
+
+.Button--secondary {
+  background: var(--color-white);
+  color: var(--color-dark) !important;
+  padding: 14px 20px;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  text-rendering: optimizeLegibility;
+}
+
+.Button--primary:hover,
+.Button--primary:focus,
+.Button--primary:active,
+.Button--primary.is-pressed,
+.Button--secondary:hover,
+.Button--secondary:focus,
+.Button--secondary:active,
+.Button--secondary.is-pressed {
+  background-color: var(--color-brand);
+}
+
+#Booking {
+  display: none;
+}
+
+#Booking-nav {
+  background-color: var(--color-highlight);
+  color: var(--color-brand);
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+@media (min-width: 900px) {
+  #Booking {
+    display: block;
+  }
+}

@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+header,
+footer {
+  margin-left: 32px;
+  margin-right: 32px;
+  height: 88px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+nav {
+  display: flex; }
+
+.navbar-header,
+.navbar-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.navbar-desktop-links {
+  display: none; }
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #222;
+  margin: 5px;
+  transition: 0.3s cubic-bezier(0.55, 0.06, 0.68, 0.19); }
+
+.toggle .line-1 {
+  width: 25px;
+  transform: rotate(-45deg) translate(-5px, 6px);
+  background-color: #fff; }
+
+.toggle .line-2 {
+  opacity: 0;
+  background-color: #fff; }
+
+.toggle .line-3 {
+  width: 25px;
+  transform: rotate(45deg) translate(-5px, -6px);
+  background-color: #fff; }
+
+.burger {
+  cursor: pointer;
+  z-index: 10;
+  border: none;
+  background-color: transparent; }
+
+.toggle {
+  position: fixed;
+  right: 32px; }
+
+@media (min-width: 900px) {
+  .navbar-desktop-links {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-default);
+    font-weight: 600;
+    font-size: var(--font-size-sm); }
+    .navbar-desktop-links li {
+      list-style-type: none; }
+    .navbar-desktop-links li:not(:last-child) {
+      margin-right: 24px; }
+    .navbar-desktop-links a {
+      text-decoration: none; }
+  .navbar-footer-links {
+    display: flex; }
+    .navbar-footer-links li {
+      margin: 0 8px; }
+  .burger {
+    display: none; }
+  .icon {
+    right: calc(var(--space) *4); }
+    .icon svg {
+      display: block; }
+  .logo {
+    left: calc(var(--space) *4); }
+  .footer-logo {
+    left: calc(var(--space) *4); }
+  nav .Button--primary {
+    right: calc(var(--space) *4); } }
+
+.offscreen-nav {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(100vw);
+  background-color: var(--color-brand);
+  z-index: 5;
+  transition: .2s;
+  transition-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1); }
+
+.offscreen-nav.open {
+  transform: translateY(0vh); }
+
+.offscreen-nav {
+  align-items: center;
+  justify-content: center; }
+
+.offscreen-nav-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: x-large; }
+
+.offscreen-nav-links li {
+  list-style-type: none;
+  margin-top: calc(var(--space) *4);
+  margin-bottom: calc(var(--space) *1); }
+  .offscreen-nav-links li a {
+    color: #fff;
+    text-decoration: none; }
+
+.ButtonWrap {
+  text-align: center;
+  margin-top: calc(var(--space) * 4); }
+
+.Button {
+  border: none;
+  border-radius: 8px;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  padding: calc(var(--space)*1.5) calc(var(--space) *2);
+  transition-duration: 0.2s;
+  vertical-align: middle;
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none; }
+  .Button:hover {
+    border: none;
+    text-decoration: none !important; }
+
+.Button--primary {
+  background: var(--color-brand);
+  color: var(--color-white);
+  padding: 14px 20px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  text-rendering: optimizeLegibility; }
+
+.Button--secondary {
+  background: var(--color-white);
+  color: var(--color-dark) !important;
+  padding: 14px 20px;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  text-rendering: optimizeLegibility; }
+
+.Button--primary:hover,
+.Button--primary:focus,
+.Button--primary:active,
+.Button--primary.is-pressed,
+.Button--secondary:hover,
+.Button--secondary:focus,
+.Button--secondary:active,
+.Button--secondary.is-pressed {
+  background-color: var(--color-brand); }
+
+#Booking {
+  display: none; }
+
+#Booking-nav {
+  background-color: var(--color-highlight);
+  color: var(--color-brand);
+  width: 100%;
+  display: block;
+  text-align: center; }
+
+@media (min-width: 900px) {
+  #Booking {
+    display: block; } }
+
+.logo {
+  font-size: var(--font-size-md);
+  text-decoration: none;
+  color: var(--color-dark);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  transition: .2s; }
+  .logo:hover {
+    color: var(--color-brand); }
+
+.footer-logo {
+  text-decoration: none;
+  border: 3px dashed var(--color-aqua);
+  padding: calc(var(--space) * 3);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-aqua); }
+  .footer-logo:hover {
+    color: var(--color-dark);
+    border: 3px dashed var(--color-dark); }
+
+:root {
+  --font-default: "Inter", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-heading: "Inter", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-mono: "Montserrat", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace;
+  --font-mono-bold: "Montserrat", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace;
+  --font-size-xxl: 4rem;
+  --font-size-xl: 3rem;
+  --font-size-lg: 2.5rem;
+  --font-size-md: 1.5rem;
+  --font-size-sm: 1rem;
+  --font-size-xs: 0.81rem;
+  --font-size-xxs: 0.75rem;
+  --font-size-base: 100%;
+  --font-size-default: 1rem;
+  --font-style-normal: normal;
+  --font-style-italic: italic;
+  --line-height-lg: 2;
+  --line-height-md: 1.5;
+  --line-height-sm: 1.4;
+  --line-height-xs: 1.2; }
+
+:root {
+  --color-dark: #222;
+  --color-body: #F2F5EA;
+  --color-accent: #00AAB5;
+  --color-brand: #0C134F;
+  --color-white: #fff;
+  --color-highlight: #FDC448; }
+
+::selection {
+  color: var(--color-brand);
+  background-color: var(--color-accent); }
+
+:root {
+  --space: calc(1rem/2); }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+[hidden] {
+  display: none; }
+
+body {
+  font-family: var(--font-default);
+  background-color: var(--color-body); }

@@ -1,5 +1,14 @@
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
-<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
-{{ partialCached "head/css.html" . }}
-{{ partialCached "head/js.html" . }}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leisure Angels</title>
+  <!--Authenticate with Netlify identity -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  {{ $scss := resources.Get "scss/main.scss" }} {{ $styles := $scss | resources.ToCSS }} 
+
+
+  <link rel="stylesheet" href="{{ $styles.Permalink }}" />
+  <!-- icons -->
+  <link rel="icon" href="/img/ccptfavicon.png" sizes="32x32" type="image/png" />
+  <!-- <link rel="icon" href="{{ .Site.BaseURL }}img/favicon-16x16.png" sizes="16x16" type="image/png"> -->
+</head>

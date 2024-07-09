@@ -1,0 +1,15 @@
+<nav class="offscreen-nav">
+  <ul class="offscreen-nav-links">
+    <li>
+      <a href="/">HOME</a>
+    </li>
+    {{ range .Site.Menus.nav }}
+      <li>
+        <a href="{{ .URL }}">{{ .Name }} </a>
+      </li>
+    {{ end }}
+    <li>
+      <a href="/contact" id="Booking-nav" class="Button Button--primary">Book a class</a>
+    </li>
+  </ul>
+</nav>
