@@ -501,18 +501,12 @@ video {
   --tw-contain-paint:  ;
   --tw-contain-style:  ;
 }
-body {
-  color: #222;
-  font-family: sans-serif;
-  line-height: 1.5;
-  margin: 1rem;
-  max-width: 768px; }
-header {
-  border-bottom: 1px solid #222;
-  margin-bottom: 1rem; }
-footer {
-  border-top: 1px solid #222;
-  margin-top: 1rem; }
-a {
-  color: #00e;
-  text-decoration: none; }
+.block {
+  display: block;
+}
+.flex {
+  display: flex;
+}
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
