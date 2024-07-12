@@ -4,43 +4,38 @@
       <div class="mb-6">
         <h4 class="text-lg mb-3 font-medium">Services</h4>
         <ul>
-          <li>
-            Personal Training
-          </li>
-          <li>
-            Kids Clubs
-          </li>
-          <li>
-            Special Events
-          </li>
-          <li>
-            Sports Development Coaching
-          </li>
+          {{ range .Site.Menus.footer }}
+            <li>
+              <a href="{{ .URL }}" class="header-links hover">{{ .Name }}</a>
+            </li>
+          {{ end }}
         </ul>
       </div>
       <div class="mb-6">
         <h4 class="text-lg mb-3 font-medium">Information</h4>
         <ul>
+          {{ range .Site.Menus.nav }}
+            {{ if .Params.information }}
+              <li>
+                <a href="{{ .URL }}" class="header-links hover">{{ .Name }}</a>
+              </li>
+            {{ end }}
+          {{ end }}
           <li>
-            About
-          </li>
-          <li>
-            FAQ's
-          </li>
-          <li>
-            Contanct
+            <a href="/faqs/" class="header-links hover">FAQ's</a>
           </li>
         </ul>
       </div>
       <div>
         <h4 class="text-lg mb-3 font-medium">More</h4>
         <ul>
-          <li>
-            Testimonials
-          </li>
-          <li>
-            Gallery
-          </li>
+          {{ range .Site.Menus.nav }}
+            {{ if .Params.more }}
+              <li>
+                <a href="{{ .URL }}" class="header-links hover">{{ .Name }}</a>
+              </li>
+            {{ end }}
+          {{ end }}
         </ul>
       </div>
       <a href="{{ .Site.Params.socialInstagram }}" class="icon">

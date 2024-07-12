@@ -4,44 +4,62 @@ title = 'My New Hugo Site'
 theme = 'la'
 
 [[menu.nav]]
-name = "ABOUT"
+name = "About"
 url = "/about/"
 weight = 5
+[menu.nav.params]
+information = true
 
 [[menu.nav]]
-name = "SERVICES"
+name = "Services"
 url = "/services/"
 weight = 5
 
 [[menu.nav]]
-name = "GALLERY"
+name = "Gallery"
 url = "/gallery/"
 weight = 5
+[menu.nav.params]
+more = true
 
 [[menu.nav]]
-name = "CONTACT"
+name = "Contact"
 url = "/contact/"
 weight = 5
+[menu.nav.params]
+information = true
 
 [[menu.nav]]
-name = "TESTIMONIALS"
+name = "Testimonials"
 url = "/testimonials/"
+weight = 5
+[menu.nav.params]
+more = true
+
+[[menu.footer]]
+name = "Personal Training"
+url = "/personal-training/"
+weight = 5
+
+[[menu.footer]]
+name = "Kids Clubs"
+url = "/kids-clubs/"
+weight = 5
+
+[[menu.footer]]
+name = "Special Events"
+url = "/special-events/"
+weight = 5
+
+[[menu.footer]]
+name = "Sports Development Coaching"
+url = "/sports-development-coaching/"
 weight = 5
 
 [[menus.main]]
 name = 'Home'
 pageRef = '/'
 weight = 10
-
-[[menus.main]]
-name = 'Posts'
-pageRef = '/posts'
-weight = 20
-
-[[menus.main]]
-name = 'Tags'
-pageRef = '/tags'
-weight = 30
 
 [module]
 [module.hugoVersion]
