@@ -1,5 +1,4 @@
-header,
-footer {
+header {
   margin-left: 32px;
   margin-right: 32px;
   height: 88px;
@@ -12,8 +11,7 @@ nav {
   display: flex;
 }
 
-.navbar-header,
-.navbar-footer {
+.navbar-header {
   width: 100%;
   display: flex;
   justify-content: space-between;

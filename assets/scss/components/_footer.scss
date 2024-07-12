@@ -1,0 +1,18 @@
+.footer-bottom {
+  justify-content: space-between;
+}
+
+.footer-nav {
+  color: var(--color-body);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-dark);
+  padding: 24px 32px;
+}
+
+.navbar-footer {
+  margin-bottom: calc(var(--space) *6);
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+}
